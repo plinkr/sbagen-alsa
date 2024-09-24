@@ -5,7 +5,7 @@
 #       omits them.  To build the libraries, see the 'mk-libmad-linux'
 #       and 'mk-tremor-linux' scripts.
 
-OPT="-DT_LINUX_ALSA -Wall -g  -lm -lpthread  `pkg-config --cflags alsa` -DOGG_DECODE" 
+OPT="-DT_LINUX_ALSA -Wall -g -O3 -s -lm -lpthread  `pkg-config --cflags alsa` -DOGG_DECODE"
 LIBS="`pkg-config --libs alsa` `pkg-config --libs vorbisfile`"
 
 echo $OPT $LIBS
